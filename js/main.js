@@ -149,7 +149,7 @@ function setLang(lang) {
   const mobCta = q('.mobile-cta'); if (mobCta) mobCta.textContent = t.nav_cta;
 
   // Lang buttons active state
-  const langMap = {en:0, zh:1, ja:2, ko:3, th:4};
+  const langMap = {en:0, th:1, zh:2, ko:3, ja:4};
   qa('.lang-switcher .lang-btn').forEach((b, i) => b.classList.toggle('active', i === langMap[lang]));
   qa('.mobile-lang-switcher .lang-btn').forEach((b, i) => b.classList.toggle('active', i === langMap[lang]));
 
@@ -282,7 +282,7 @@ function setLang(lang) {
 }
 
 // ─── LANG BUTTON HANDLERS ───
-const langCodes = ['en','zh','ja','ko','th'];
+const langCodes = ['en','th','zh','ko','ja'];
 document.querySelectorAll('.lang-switcher .lang-btn').forEach((btn, i) => {
   btn.addEventListener('click', () => setLang(langCodes[i]));
 });
