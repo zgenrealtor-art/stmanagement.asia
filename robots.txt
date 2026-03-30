@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stmanagement.asia/sitemap.xml
+
+# Asian search engines
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: NaverBot
+Allow: /
+
+User-agent: Yahoo Slurp
+Allow: /

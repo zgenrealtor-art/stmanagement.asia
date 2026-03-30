@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — ST Management Asia</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500&family=Noto+Serif+SC:wght@300&family=Noto+Serif+JP:wght@300&family=Noto+Serif+KR:wght@300&family=Noto+Serif+Thai:wght@300&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #0e0c0a; --cream: #f2ead8; --cream-dim: #e0d6c2;
+      --gold: #c8a870; --gold-dim: #9e7f4e; --border: rgba(200,168,112,.18);
+    }
+    body {
+      background: var(--ink); color: var(--cream);
+      font-family: 'Jost', sans-serif; font-weight: 400;
+      min-height: 100vh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      padding: 2rem; position: relative; overflow: hidden;
+    }
+
+    /* Decorative background */
+    body::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(200,168,112,.06) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 30%, rgba(200,168,112,.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    body::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: .03; pointer-events: none;
+    }
+
+    .content { position: relative; z-index: 1; }
+
+    /* Decorative top line */
+    .deco-line {
+      width: 60px; height: 1px; background: var(--gold); margin: 0 auto 2rem;
+      opacity: .5;
+    }
+
+    .code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(6rem, 18vw, 12rem); font-weight: 300;
+      color: var(--gold); line-height: 1; opacity: .15;
+      letter-spacing: .05em;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 300;
+      margin: .8rem 0 .8rem;
+    }
+    h1 em { font-style: italic; color: var(--gold); }
+    p { color: var(--cream-dim); font-size: .95rem; line-height: 1.7; max-width: 440px; }
+    .asian {
+      margin-top: 1.5rem; display: flex; flex-direction: column; gap: .4rem;
+    }
+    .asian span { letter-spacing: .12em; }
+    .cn { font-family: 'Noto Serif SC', serif; font-size: .85rem; color: var(--gold-dim); }
+    .jp { font-family: 'Noto Serif JP', serif; font-size: .78rem; color: rgba(158,127,78,.6); }
+    .kr { font-family: 'Noto Serif KR', serif; font-size: .78rem; color: rgba(158,127,78,.6); }
+    .th { font-family: 'Noto Serif Thai', serif; font-size: .78rem; color: rgba(158,127,78,.6); }
+
+    .actions { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      display: inline-block;
+      font-family: 'Jost', sans-serif; font-size: .75rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--ink); background: var(--gold);
+      padding: 1rem 2.8rem; text-decoration: none;
+      transition: background .25s, transform .2s;
+    }
+    .btn:hover { background: #d9ba84; transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      font-family: 'Jost', sans-serif; font-size: .75rem; font-weight: 400;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--cream-dim); border: 1px solid rgba(200,168,112,.35);
+      padding: 1rem 2.4rem; text-decoration: none;
+      transition: border-color .25s, color .25s, transform .2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+    .logo {
+      position: absolute; top: 2rem; left: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none; z-index: 2;
+    }
+    .logo span { color: var(--cream); }
+
+    /* Decorative corner accents */
+    .corner { position: absolute; width: 80px; height: 80px; z-index: 1; }
+    .corner-tl { top: 3rem; left: 3rem; border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+    .corner-br { bottom: 3rem; right: 3rem; border-bottom: 1px solid var(--border); border-right: 1px solid var(--border); }
+
+    @media (max-width: 768px) {
+      .corner { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="logo">ST<span> Management</span></a>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-br"></div>
+  <div class="content">
+    <div class="deco-line"></div>
+    <div class="code">404</div>
+    <h1>Page <em>Not Found</em></h1>
+    <p>The page you're looking for doesn't exist or has been moved. Let us help you find your way back.</p>
+    <div class="asian">
+      <span class="cn">页面未找到 · 请返回首页</span>
+      <span class="jp">ページが見つかりません · ホームへ戻る</span>
+      <span class="kr">페이지를 찾을 수 없습니다 · 홈으로 돌아가기</span>
+      <span class="th">ไม่พบหน้านี้ · กลับสู่หน้าหลัก</span>
+    </div>
+    <div class="actions">
+      <a href="/" class="btn">Back to Home</a>
+      <a href="/contact.html" class="btn-outline">Contact Us</a>
+    </div>
+  </div>
+</body>
+</html>
